@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         GridLayout mainLayout = new GridLayout(this);
         mainLayout.setColumnCount(4);
+        mainLayout.setBackgroundColor(getColor(R.color.calculator_background));
         PanelDisplay display = new PanelDisplay(this);
         mainLayout.addView(display);
 
@@ -49,23 +50,23 @@ public class MainActivity extends AppCompatActivity {
     private void initializeData() {
         buttonData = new ArrayList<ButtonData>(){
             {
-                add(new ButtonData("C", 0, 3, 1));
+                add(new ButtonData("C", 0, 3, 1, null, getColor(R.color.clear_text)));
                 add(new ButtonData("7", 1, 0, 1));
                 add(new ButtonData("8", 1, 1, 1));
                 add(new ButtonData("9", 1, 2, 1));
-                add(new ButtonData("/", 1, 3, 1));
+                add(new ButtonData("/", 1, 3, 1, null, getColor(R.color.operator)));
                 add(new ButtonData("4", 2, 0, 1));
                 add(new ButtonData("5", 2, 1, 1));
                 add(new ButtonData("6", 2, 2, 1));
-                add(new ButtonData("X", 2, 3, 1));
+                add(new ButtonData("X", 2, 3, 1, null, getColor(R.color.operator)));
                 add(new ButtonData("1", 3, 0, 1));
                 add(new ButtonData("2", 3, 1, 1));
                 add(new ButtonData("3", 3, 2, 1));
-                add(new ButtonData("-", 3, 3, 1));
+                add(new ButtonData("-", 3, 3, 1, null, getColor(R.color.operator)));
                 add(new ButtonData("0", 4, 0, 2));
                 add(new ButtonData(".", 4, 2, 1));
-                add(new ButtonData("+", 4, 3, 1));
-                add(new ButtonData("=", 5, 0, 4));
+                add(new ButtonData("+", 4, 3, 1, null, getColor(R.color.operator)));
+                add(new ButtonData("=", 5, 0, 4, getColor(R.color.operator), getColor(R.color.white)));
             }
         };
     }

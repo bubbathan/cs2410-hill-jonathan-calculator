@@ -5,7 +5,6 @@ public class Calculator {
         String[] tokens = expression.split(" ");
         if (tokens.length == 0) {
             return Double.NaN;
-            //TODO: handle this error
         }
 
         if (tokens.length == 1) {
@@ -16,6 +15,12 @@ public class Calculator {
         }
 
         if (tokens.length == 2) {
+            return Double.NaN;
+        }
+
+        if (tokens[0].equals("")) {
+            return Double.NaN;
+        } else if (tokens[1].equals("")) {
             return Double.NaN;
         }
 

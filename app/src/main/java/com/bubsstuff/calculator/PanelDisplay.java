@@ -15,6 +15,7 @@ public class PanelDisplay extends AppCompatTextView {
         params.rowSpec = GridLayout.spec(0, 1, 1);
         params.columnSpec = GridLayout.spec(0, 3, 1);
         setGravity(Gravity.END);
+        setTextColor(getResources().getColor(R.color.white, null));
         setTextSize(24);
         setLayoutParams(params);
         setExpression(expression);
